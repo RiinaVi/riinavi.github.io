@@ -1,0 +1,49 @@
+header {
+    height: 72px;
+    margin-bottom: 58px;
+}
+
+@media (max-width: 992px) {
+    header .nav .nav-link {
+        padding: 0 8px 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: auto !important;
+        margin-bottom: 16px !important;
+    }
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.dropdown-toggle:after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+    margin-left: 8px;
+}
+
+header input[type='search'] {
+    background: var(--gray);
+    border-radius: 0 24px 24px 0;
+}
+
+header #addon-wrapping {
+    background: var(--gray);
+    border-radius: 24px 0 0 24px;
+    margin-right: -3px;
+}
+
+header form.col {
+    margin-right: 40px;
+    margin-left: -8px;
+}

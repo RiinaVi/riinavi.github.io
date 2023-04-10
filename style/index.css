@@ -1,0 +1,18 @@
+@import "card.css";
+@import "nav.css";
+@import "theme.css";
+
+@font-face {
+    font-family: 'Commissioner';
+    src: url('../assets/fonts/Commissioner/Commissioner-Medium.ttf');
+}
+
+* {
+    font-family: 'Commissioner', sans-serif ;
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1128px;
+    }
+}

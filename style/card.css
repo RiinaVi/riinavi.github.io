@@ -1,0 +1,27 @@
+.card a {
+    text-decoration: none;
+}
+
+.card a:not(.collapsed):after {
+    content: 'Show less...';
+}
+
+.card a.collapsed:after {
+    content: 'Show more...';
+}
+
+.card-description:not(.show) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.card-description {
+    min-height: 3rem;
+}
+
+.card-description.show {
+    display: block;
+}

@@ -1,0 +1,77 @@
+:root {
+    --primary-orange: #ED7135;
+    --text-dark: #292929;
+    --text-secondary: #666666;
+    --border-color: #EBEBEB;
+    --white: #FFF;
+    --gray: #EEE;
+    --light-switch-icon: "🌚";
+
+    --bg-dark: #212529;
+    --bg-dark-card: #343434;
+    --text-secondary-light: #EBEBEB;
+    --black: #000;
+    --dark-switch-icon: "🌝";
+}
+
+body.dark {
+    background: var(--bg-dark);
+}
+
+body.dark .dark-text {
+    color: var(--white) !important;
+}
+
+body.dark .card, body.dark .bg-white {
+    background: var(--bg-dark-card) !important;;
+}
+
+body.dark .color-secondary {
+    color: var(--text-secondary-light) !important;
+}
+
+body.dark header {
+    border-bottom-color: var(--text-secondary) !important;
+}
+
+header .nav .nav-link.active {
+    border-bottom: 2px solid var(--primary-orange);
+    font-weight: 700;
+}
+
+.nav-pills .active, .btn-primary {
+    background-color: var(--primary-orange) !important;
+    border: none;
+}
+
+.btn-check:checked+.btn-outline-primary {
+    background: var(--text-dark);
+    border-color: var(--text-dark);
+}
+
+.btn-outline-primary, .btn-outline-primary:hover {
+    color: var(--text-dark);
+    font-weight: 700;
+    border-color: var(--border-color);
+    background: var(--white);;
+}
+
+.color-secondary {
+    color: var(--text-secondary) !important;
+}
+
+.text-orange {
+    color: var(--primary-orange); !important;
+}
+
+.dark-text {
+    color: var(--text-dark) !important;
+}
+
+body.dark #btnSwitch:after {
+    content: var(--dark-switch-icon);
+}
+
+#btnSwitch:after {
+    content: var(--light-switch-icon);
+}

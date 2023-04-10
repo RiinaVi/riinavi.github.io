@@ -1,0 +1,10 @@
+{
+  "name": "djinni-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "open ./index.html"
+  },
+  "author": "Arina Kysilova",
+  "license": "ISC"
+}
