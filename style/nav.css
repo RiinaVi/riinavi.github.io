@@ -37,6 +37,11 @@ header input[type='search'] {
     border-radius: 0 24px 24px 0;
 }
 
+header input[type='search']:focus {
+    box-shadow: none;
+    background: var(--gray);
+}
+
 header #addon-wrapping {
     background: var(--gray);
     border-radius: 24px 0 0 24px;
