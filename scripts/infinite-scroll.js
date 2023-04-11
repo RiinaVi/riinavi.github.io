@@ -65,18 +65,18 @@ const appendCards = (data) => {
 };
 
 const fetchImages = async () => {
-  showSpinner();
   isFetching = true;
   const data = await fetchData(currentPage);
   cardsCounter += data.length;
   appendCards(data);
   currentPage++;
   isFetching = false;
-  hideSpinner();
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
+  showSpinner();
   await fetchImages();
+  hideSpinner();
 });
 
 window.addEventListener("scroll", async () => {
