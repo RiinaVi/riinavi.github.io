@@ -25,3 +25,8 @@
 .card-description.show {
     display: block;
 }
+
+#spinner .spinner-border {
+    width: 5rem;
+    height: 5rem;
+}

@@ -30,17 +30,29 @@ const createCard = (id, header, imageSrc, description) => {
    </div>
 `;
   return div;
-}
+};
 
 const updateCounter = () => {
   const counter = document.getElementById('cardCounter');
   counter.innerText = `${cardsCounter} items`;
-}
+};
 
 const generateDescription = () => {
   const descriptionLength = Math.floor(Math.random() * (MAX_LENGTH - MIN_LENGTH + 1) + MIN_LENGTH);
   return FULL_TEXT.slice(0, descriptionLength);
-}
+};
+
+const showSpinner = () => {
+  const spinner = document.getElementById('spinner');
+  spinner.classList.remove('d-none');
+  spinner.classList.add('d-flex');
+};
+
+const hideSpinner = () => {
+  const spinner = document.getElementById('spinner');
+  spinner.classList.remove('d-flex');
+  spinner.classList.add('d-none');
+};
 
 const appendCards = (data) => {
   const root = document.getElementById('cardsContainer');
@@ -50,15 +62,17 @@ const appendCards = (data) => {
     root.appendChild(createCard(id, author, download_url, generateDescription()));
   }
   updateCounter();
-}
+};
 
 const fetchImages = async () => {
+  showSpinner();
   isFetching = true;
   const data = await fetchData(currentPage);
   cardsCounter += data.length;
   appendCards(data);
   currentPage++;
   isFetching = false;
+  hideSpinner();
 };
 
 document.addEventListener("DOMContentLoaded", async () => {

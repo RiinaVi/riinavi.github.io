@@ -72,6 +72,11 @@ body.dark #btnSwitch:after {
     content: var(--dark-switch-icon);
 }
 
+body.dark #spinner .spinner-border {
+    border: .25em solid var(--border-color);
+    border-right-color: transparent;
+}
+
 #btnSwitch:after {
     content: var(--light-switch-icon);
 }

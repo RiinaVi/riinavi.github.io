@@ -85,7 +85,7 @@
     </header>
   
     <div class="container d-flex">
-      <div class="row">
+      <div class="row w-100">
         <div class="col-md-4 mb-4">
           <ul class="nav nav-pills flex-column mb-auto col-md-8">
             <li class="nav-item">
@@ -127,7 +127,13 @@
               <label class="btn btn-outline-primary" for="btnradio2">Latest</label>
             </div>
           </div>
-          <div id="cardsContainer" class="row"></div>
+          <div id="cardsContainer" class="row">
+            <div id="spinner" class="spinner-container d-flex justify-content-center my-4">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
