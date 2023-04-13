@@ -3,10 +3,8 @@ const THEMES = {
   light: 'light',
 };
 
-window.addEventListener('DOMContentLoaded', () => {
-  const storedTheme = localStorage.getItem('theme');
-  
-  switch (storedTheme) {
+const switchTheme = (newTheme) => {
+  switch (newTheme) {
     case THEMES.dark:
       document.body.classList.add(THEMES.dark);
       return;
@@ -14,6 +12,26 @@ window.addEventListener('DOMContentLoaded', () => {
     default:
       document.body.classList.remove(THEMES.dark);
       return;
+  }
+};
+
+const handleSystemThemeChange = () => {
+  const isDark = window.matchMedia('(prefers-color-scheme:dark)').matches;
+  const systemTheme = isDark ? THEMES.dark : THEMES.light;
+  
+  switchTheme(systemTheme);
+  localStorage.setItem('theme', systemTheme);
+};
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handleSystemThemeChange);
+
+window.addEventListener('DOMContentLoaded', () => {
+  const storedTheme = localStorage.getItem('theme');
+  
+  if (storedTheme) {
+    switchTheme(storedTheme);
+  } else {
+    handleSystemThemeChange();
   }
 });
 
