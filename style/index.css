@@ -4,15 +4,29 @@
 
 @font-face {
     font-family: 'Commissioner';
-    src: url('../assets/fonts/Commissioner/Commissioner-Medium.ttf');
+    src: url('../assets/fonts/Commissioner/Commissioner-Regular.ttf');
 }
 
-* {
-    font-family: 'Commissioner', sans-serif ;
+@font-face {
+    font-family: 'Commissioner-Bold';
+    src: url('../assets/fonts/Commissioner/Commissioner-Bold.ttf');
+}
+
+body {
+    font-family: Commissioner, sans-serif ;
+}
+
+strong {
+    font-family: Commissioner-Bold, sans-serif ;
+}
+
+h1 {
+    margin-top: -10px;
+    margin-bottom: 10px;
 }
 
 @media (min-width: 1400px) {
     .container {
-        max-width: 1128px;
+        max-width: 1140px;
     }
 }

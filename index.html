@@ -31,9 +31,9 @@
         <path d="M20 20L16.05 16.05M18 11C18 14.866 14.866 18 11 18C7.13401 18 4 14.866 4 11C4 7.13401 7.13401 4 11 4C14.866 4 18 7.13401 18 11Z" stroke="#666666" stroke-width="2" stroke-linecap="square" fill="none"/>
       </symbol>
       <symbol id="burger" viewBox="0 0 24 24" width="24" height="24">
-        <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
-        <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
-        <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M4 18L20 18" stroke="#666666" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M4 12L20 12" stroke="#666666" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M4 6L20 6" stroke="#666666" stroke-width="2" stroke-linecap="round"></path>
       </symbol>
     </svg>
     
@@ -45,13 +45,13 @@
           </span>
         </button>
         <div class="collapse navbar-collapse" id="targetId">
-          <nav class="nav justify-content-end justify-content-md-start float-md-start col-md-4" >
-            <a class="nav-link active py-4 px-0 dark-text" style="height: 72px" aria-current="page" href="#">Photos</a>
-            <a class="nav-link py-4 px-0 ms-4 dark-text" style="height: 72px" href="#">Videos</a>
-            <a class="nav-link py-4 px-0 ms-4 dark-text" style="height: 72px" href="#">Podcasts</a>
+          <nav class="nav flex-column flex-md-row justify-content-end justify-content-md-start float-md-start col-md-4" >
+            <a class="nav-link active py-2 py-md-4 px-0 dark-text" style="height: 72px" aria-current="page" href="#">Photos</a>
+            <a class="nav-link py-2 py-md-4 px-0 ms-0 ms-md-4 color-secondary" style="height: 72px" href="#">Videos</a>
+            <a class="nav-link py-2 py-md-4 px-0 ms-0 ms-md-4 color-secondary" style="height: 72px" href="#">Podcasts</a>
           </nav>
-          <div class="d-flex col-md-8 py-3">
-            <form class="col">
+          <div class="d-flex flex-column flex-md-row col-md-8 py-0 py-md-3">
+            <form class="col py-3 py-md-0 order-1 order-md-0">
               <div class="input-group flex-nowrap">
                 <span class="input-group-text border-0 pe-0 py-2" id="addon-wrapping">
                   <svg class="bi" width="24" height="24"><use xlink:href="#search"/></svg>
@@ -60,7 +60,7 @@
               </div>
             </form>
           
-            <div class="dropdown me-4">
+            <div class="dropdown me-4 py-2 py-md-0">
               <a href="#" class="h-100 d-flex align-items-center text-decoration-none dropdown-toggle color-secondary" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                 English
               </a>
@@ -73,41 +73,41 @@
               </ul>
             </div>
             
-            <ul class="nav align-items-center">
+            <ul class="nav align-items-center py-2 py-md-0">
               <li class="nav-item">
-                <a href="#" class="nav-link px-2 color-secondary">Sign in</a>
+                <a href="#" class="nav-link px-0 px-md-2 color-secondary">Sign in</a>
               </li>
             </ul>
-            <button class="btn btn-outline-primary ms-2" id="btnSwitch"></button>
+            <button class="btn btn-outline-primary ms-2 d-none d-md-block" id="btnSwitch"></button>
           </div>
         </div>
       </div>
     </header>
   
     <div class="container d-flex">
-      <div class="row w-100">
+      <div class="row">
         <div class="col-md-4 mb-4">
-          <ul class="nav nav-pills flex-column mb-auto col-md-8">
+          <ul class="nav nav-pills flex-column mb-auto col-md-9">
             <li class="nav-item">
-              <a href="#" class="nav-link active button-orange d-flex" aria-current="page">
+              <a href="#" class="nav-link active d-flex" aria-current="page">
                 <svg class="bi me-2" width="24" height="24"><use xlink:href="#all"/></svg>
                 All photos
               </a>
             </li>
             <li>
-              <a href="#" class="nav-link color-secondary font-weight-bold d-flex">
+              <a href="#" class="nav-link color-secondary d-flex">
                 <svg class="bi me-2" width="24" height="24" fill="none"><use xlink:href="#selfies"/></svg>
                 Selfies
               </a>
             </li>
             <li>
-              <a href="#" class="nav-link color-secondary font-weight-bold d-flex">
+              <a href="#" class="nav-link color-secondary d-flex">
                 <svg class="bi me-2" width="24" height="24" fill="none"><use xlink:href="#recent"/></svg>
                 Recent
               </a>
             </li>
             <li>
-              <a href="#" class="nav-link color-secondary font-weight-bold d-flex">
+              <a href="#" class="nav-link color-secondary d-flex">
                 <svg class="bi me-2" width="24" height="24" fill="none"><use xlink:href="#deleted"/></svg>
                 Deleted
               </a>
@@ -115,16 +115,16 @@
           </ul>
         </div>
         <div class="col-md-8">
-          <div class="row justify-content-between align-items-start mb-2">
+          <div class="row justify-content-between align-items-start mb-3">
             <div class="w-auto">
-              <h1 class="dark-text" style="margin-top: -10px;"><strong>All photos</strong></h1>
-              <p class="small text-secondary" id="cardCounter"><strong>150 items</strong></p>
+              <h1 class="dark-text"><strong>All photos</strong></h1>
+              <p class="small text-secondary" id="cardCounter">150 items</p>
             </div>
             <div class="btn-group w-auto d-flex align-items-center" role="group" aria-label="Basic radio toggle button group">
               <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-              <label class="btn btn-outline-primary" for="btnradio1">Newest</label>
+              <label class="btn btn-outline-primary ms-0" for="btnradio1">Newest</label>
               <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-              <label class="btn btn-outline-primary" for="btnradio2">Latest</label>
+              <label class="btn btn-outline-primary ms-0" for="btnradio2">Latest</label>
             </div>
           </div>
           <div id="cardsContainer" class="row">

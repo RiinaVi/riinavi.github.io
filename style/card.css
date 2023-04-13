@@ -10,6 +10,26 @@
     content: 'Show more...';
 }
 
+.card {
+    border-radius: .5rem;
+}
+
+.card-footer:last-child {
+    border-radius: 0 0 .5rem .5rem;
+}
+
+.card-img-top {
+    max-height: 200px;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+@media (max-width: 992px) {
+    .card-img-top {
+        max-height: unset;
+    }
+}
+
 .card-description:not(.show) {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -29,4 +49,25 @@
 #spinner .spinner-border {
     width: 5rem;
     height: 5rem;
+}
+
+.card .btn, .btn-group .btn {
+    padding: 7px 16px 9px;
+    height: 2.5rem;
+    font-weight: 700;
+    font-family: Commissioner-Bold, sans-serif;
+}
+
+.btn-group label:last-of-type {
+    padding: 7px 21px 9px 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    line-height: 150%;
+}
+
+#cardCounter {
+    font-weight: 700;
+    font-family: Commissioner-Bold, sans-serif;
 }

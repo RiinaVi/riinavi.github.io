@@ -16,16 +16,16 @@ const createCard = (id, header, imageSrc, description) => {
   div.innerHTML = `
     <div class="card p-0 h-100">
       <img src=${imageSrc} class="card-img-top" alt="card">
-        <div class="card-body p-4">
-          <h5 class="card-title dark-text"><strong>${header}</strong></h5>
-          <p class="card-text text-secondary collapse card-description" id="collapseId${id}" aria-expanded="false">
+        <div class="card-body px-4 pt-3">
+          <h5 class="card-title dark-text mb-1"><strong>${header}</strong></h5>
+          <p class="card-text text-secondary collapse card-description mb-2" id="collapseId${id}" aria-expanded="false">
             ${description}
           </p>
           <a role="button" class="collapsed text-decoration-none dark-text ${description.length < 80 && 'd-none'}" data-bs-toggle="collapse" href="#collapseId${id}" role="button" aria-expanded="false" aria-controls="collapseId${id}"></a>
         </div>
         <div class="card-footer bg-white p-3 d-flex gap-3">
           <button class="btn btn-primary">Save to collection</button>
-          <button class="btn btn-outline-primary">Share</button>
+          <button class="btn btn-outline-primary border-2 lh-sm">Share</button>
         </div>
    </div>
 `;

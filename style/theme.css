@@ -37,10 +37,12 @@ body.dark header {
 header .nav .nav-link.active {
     border-bottom: 2px solid var(--primary-orange);
     font-weight: 700;
+    font-family: Commissioner-Bold, sans-serif;
 }
 
 .nav-pills .active, .btn-primary {
     background-color: var(--primary-orange) !important;
+    border-radius: .5rem;
     border: none;
 }
 
@@ -53,7 +55,8 @@ header .nav .nav-link.active {
     color: var(--text-dark);
     font-weight: 700;
     border-color: var(--border-color);
-    background: var(--white);;
+    background: var(--white);
+    border-radius: .5rem;
 }
 
 .color-secondary {
@@ -79,4 +82,12 @@ body.dark #spinner .spinner-border {
 
 #btnSwitch:after {
     content: var(--light-switch-icon);
+}
+
+body.dark header input[type='search'], body.dark header input[type='search']:focus, body.dark header #addon-wrapping {
+    background: var(--bg-dark-card);
+}
+
+body.dark header input[type='search']::placeholder {
+    color: var(--white);
 }

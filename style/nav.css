@@ -1,6 +1,59 @@
 header {
-    height: 72px;
-    margin-bottom: 58px;
+    height: 4.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.nav-pills {
+    position: relative;
+    left: -12px;
+    width: calc(75% + 6px);
+    font-family: Commissioner-Bold, sans-serif;
+}
+
+.nav-pills .nav-link {
+    padding: 7px 12px 9px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.dropdown-toggle:after {
+    content: "";
+    width: .5rem;
+    height: .5rem;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+    margin-left: .5rem;
+    margin-top: -4px;
+}
+
+header input[type='search'] {
+    background: var(--gray);
+    border-radius: 0 1.5rem 1.5rem 0;
+    padding-left: 8px;
+}
+
+header input[type='search']:focus {
+    box-shadow: none;
+    background: var(--gray);
+}
+
+header input[type='search']::placeholder {
+    color: var(--text-secondary);
+}
+
+header #addon-wrapping {
+    background: var(--gray);
+    border-radius: 1.5rem 0 0 1.5rem;
+}
+
+header form.col {
+    margin-right: 40px;
+    margin-left: 8px;
 }
 
 @media (max-width: 992px) {
@@ -14,41 +67,22 @@ header {
         height: auto !important;
         margin-bottom: 16px !important;
     }
+
+    .nav-pills {
+        position: static;
+    }
+
+    header .nav .nav-link {
+        height: auto !important;
+    }
+
+    header .nav .nav-link.active {
+        border-bottom: none !important;
+    }
+
+    header form.col {
+        margin: 0 !important;
+    }
+
 }
 
-.navbar-toggler:focus {
-    box-shadow: none !important;
-}
-
-.dropdown-toggle:after {
-    content: "";
-    width: 8px;
-    height: 8px;
-    border-bottom: 2px solid;
-    border-right: 2px solid;
-    border-top: none;
-    border-left: none;
-    transform: rotate(45deg);
-    margin-left: 8px;
-}
-
-header input[type='search'] {
-    background: var(--gray);
-    border-radius: 0 24px 24px 0;
-}
-
-header input[type='search']:focus {
-    box-shadow: none;
-    background: var(--gray);
-}
-
-header #addon-wrapping {
-    background: var(--gray);
-    border-radius: 24px 0 0 24px;
-    margin-right: -3px;
-}
-
-header form.col {
-    margin-right: 40px;
-    margin-left: -8px;
-}
